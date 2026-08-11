@@ -9,6 +9,7 @@ Run `:Cheatsheet` (or press `<leader>?`) to view this file in a floating window 
 | Key | Action |
 |---|---|
 | `<leader>e` | Toggle file explorer |
+| `<C-w>h` / `<C-w>l` | Switch focus between file tree and editor pane (standard window nav, see below) |
 
 ## LSP
 
