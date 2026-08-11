@@ -2,6 +2,8 @@
 
 Leader key: `<Space>`
 
+Run `:Cheatsheet` (or press `<leader>?`) to view this file in a floating window inside Neovim.
+
 ## File explorer (neo-tree)
 
 | Key | Action |
