@@ -24,6 +24,7 @@ return {
         "pyright",
         "ts_ls",       -- was tsserver, renamed a while back
         "rust_analyzer",
+        "gopls",
       },
       -- automatic_installation = true,
     },
