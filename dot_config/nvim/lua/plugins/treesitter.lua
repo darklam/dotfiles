@@ -1,27 +1,45 @@
 -- lua/plugins/treesitter.lua
+local parsers = {
+  "lua",
+  "vim",
+  "vimdoc",
+  "markdown",
+  "markdown_inline",
+  "python",
+  "javascript",
+  "typescript",
+  "rust",
+  "go",
+}
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
+    lazy = false,
     build = ":TSUpdate",
-    event = { "BufReadPost", "BufNewFile" },
-    opts = {
-      ensure_installed = {
+    config = function()
+      require("nvim-treesitter").install(parsers)
+
+      local filetypes = {
         "lua",
         "vim",
-        "vimdoc",
+        "help",
         "markdown",
-        "markdown_inline",
         "python",
         "javascript",
         "typescript",
         "rust",
         "go",
-      },
-      highlight = { enable = true },
-      indent = { enable = true },
-    },
-    config = function(_, opts)
-      require("nvim-treesitter.configs").setup(opts)
+      }
+
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = filetypes,
+        callback = function()
+          vim.treesitter.start()
+          vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        end,
+      })
     end,
   },
 }
