@@ -47,15 +47,14 @@ Leader key: `<Space>`
 
 ## Fuzzy finding (Telescope)
 
-No dedicated keymaps are bound yet — invoke pickers directly via command:
-
-| Command | Action |
+| Key | Action |
 |---|---|
-| `:Telescope find_files` | Search files by name |
-| `:Telescope live_grep` | Search text across the project |
-| `:Telescope buffers` | Switch between open buffers |
-| `:Telescope help_tags` | Search help docs |
-| `:Telescope oldfiles` | Recently opened files |
+| `<leader>ff` | Find files |
+| `<leader>fg` | Search globally (live grep) |
+| `<leader>/` | Search in current file |
+| `<leader>fb` | Find buffers |
+| `<leader>fh` | Search help docs |
+| `<leader>fo` | Recently opened files |
 
 ## Common Vim operations
 
