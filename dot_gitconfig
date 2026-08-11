@@ -1,0 +1,5 @@
+[user]
+	name = John Lamis
+	email = lamisjohn@gmail.com
+[push]
+	autoSetupRemote = true
